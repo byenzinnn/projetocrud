@@ -53,7 +53,7 @@ public class Conector {
 	}
 	
 	public void atualizaCarro(int idcarro, String marcacarro, String modelocarro, int anocarro) {
-		String sqlcmd = "UPDATE carro SET id_carro = ?, marca_carro = ?, modelo_carro = ?, ano_carro = ? WHERE id_carro = ?";
+		String sqlcmd = "UPDATE carro SET marca_carro = ?, modelo_carro = ?, ano_carro = ? WHERE id_carro = ?";
 		try {
 			PreparedStatement pst;
 			pst = con.prepareStatement(sqlcmd);

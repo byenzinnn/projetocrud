@@ -9,20 +9,17 @@ public class Principal {
 		char maisoper = 's'; 
 		int op, idCar, anoCar = 0;
 		String marca = null, modelo = null;
-		conecta.Dbconnect();
-		Carro carro = new Carro(1, "ford", "delrey", 98);
-		conecta.inseriCarro(carro);
-		
+		conecta.Dbconnect();		
 		Scanner sc = new Scanner(System.in);		
 		System.out.print("=========== Cadastro de Carros =========== \n" );
 	
 		while(continua) {
-			System.out.print("Escolha uma das OpÔøΩÔøΩes: \n");
+			System.out.print("Escolha uma das OpÁıeses: \n");
 			System.out.println("1 Exibir Carros " );
 			System.out.println("2 Excluir Carros " );
 			System.out.println("3 Atualizar Carros " );
 			System.out.println("4 Inserir Carros " );
-			System.out.println("5 Abandonar a OperaÔøΩÔøΩo \n" );
+			System.out.println("5 Abandonar a OperaÁ„o \n" );
 			
 			op = sc.nextInt(); 
 			if(op >= 5) {
@@ -65,11 +62,11 @@ public class Principal {
 						case 4:
 							System.out.println("Informe o id do Carro para Alterar: ");
 							idCar = sc.nextInt();
-							System.out.println("Informe a Altera√ß√£o a marca do Carro: ");
+							System.out.println("Informe a marca do Carro: ");
 							marca = sc.next();
-							System.out.println("Informe a Altera√ß√£o ao modelo do carro");
+							System.out.println("Informe o modelo do carro");
 							modelo = sc.next();
-							System.out.println("Informe a Altera√ß√£o do ano do carro");
+							System.out.println("Informe o ano do carro");
 							anoCar = sc.nextInt();
 							String marcaCarro = sc.nextLine();
 							Carro c = new Carro(idCar, marca, modelo, anoCar);
